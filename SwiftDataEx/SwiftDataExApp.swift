@@ -1,7 +1,7 @@
 //  /*
 //
-//  Project: SwiftData
-//  File: SwiftDataApp.swift
+//  Project: SwiftDataEx
+//  File: SwiftDataExApp.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 10.01.2024
 //
@@ -10,10 +10,10 @@
 import SwiftUI
 
 @main
-struct SwiftDataApp: App {
+struct SwiftDataExApp: App {
     var body: some Scene {
         WindowGroup {
-            SwiftData()
+            SwiftDataEx()
         }
     }
 }

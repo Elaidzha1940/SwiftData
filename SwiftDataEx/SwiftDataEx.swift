@@ -1,15 +1,16 @@
 //  /*
 //
-//  Project: SwiftData
-//  File: SwiftData.swift
+//  Project: SwiftDataEx
+//  File: SwiftDataEx.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 10.01.2024
 //
 //  */
 
 import SwiftUI
+import SwiftData
 
-struct SwiftData: View {
+struct SwiftDataEx: View {
     var body: some View {
         
         VStack {
@@ -19,5 +20,5 @@ struct SwiftData: View {
 }
 
 #Preview {
-    SwiftData()
+    SwiftDataEx()
 }

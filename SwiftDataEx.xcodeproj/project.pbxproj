@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E43BFD182B4F1F6700E45643 /* SwiftDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BFD172B4F1F6700E45643 /* SwiftDataApp.swift */; };
-		E43BFD1A2B4F1F6700E45643 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BFD192B4F1F6700E45643 /* SwiftData.swift */; };
+		E43BFD182B4F1F6700E45643 /* SwiftDataExApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BFD172B4F1F6700E45643 /* SwiftDataExApp.swift */; };
+		E43BFD1A2B4F1F6700E45643 /* SwiftDataEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BFD192B4F1F6700E45643 /* SwiftDataEx.swift */; };
 		E43BFD1C2B4F1F6800E45643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43BFD1B2B4F1F6800E45643 /* Assets.xcassets */; };
 		E43BFD1F2B4F1F6800E45643 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43BFD1E2B4F1F6800E45643 /* Preview Assets.xcassets */; };
+		E43BFD262B4F205B00E45643 /* MyExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BFD252B4F205B00E45643 /* MyExpense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E43BFD142B4F1F6700E45643 /* SwiftData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftData.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E43BFD172B4F1F6700E45643 /* SwiftDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataApp.swift; sourceTree = "<group>"; };
-		E43BFD192B4F1F6700E45643 /* SwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftData.swift; sourceTree = "<group>"; };
+		E43BFD142B4F1F6700E45643 /* SwiftDataEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43BFD172B4F1F6700E45643 /* SwiftDataExApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataExApp.swift; sourceTree = "<group>"; };
+		E43BFD192B4F1F6700E45643 /* SwiftDataEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataEx.swift; sourceTree = "<group>"; };
 		E43BFD1B2B4F1F6800E45643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E43BFD1E2B4F1F6800E45643 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E43BFD252B4F205B00E45643 /* MyExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +37,7 @@
 		E43BFD0B2B4F1F6700E45643 = {
 			isa = PBXGroup;
 			children = (
-				E43BFD162B4F1F6700E45643 /* SwiftData */,
+				E43BFD162B4F1F6700E45643 /* SwiftDataEx */,
 				E43BFD152B4F1F6700E45643 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +45,21 @@
 		E43BFD152B4F1F6700E45643 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E43BFD142B4F1F6700E45643 /* SwiftData.app */,
+				E43BFD142B4F1F6700E45643 /* SwiftDataEx.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E43BFD162B4F1F6700E45643 /* SwiftData */ = {
+		E43BFD162B4F1F6700E45643 /* SwiftDataEx */ = {
 			isa = PBXGroup;
 			children = (
-				E43BFD172B4F1F6700E45643 /* SwiftDataApp.swift */,
-				E43BFD192B4F1F6700E45643 /* SwiftData.swift */,
+				E43BFD172B4F1F6700E45643 /* SwiftDataExApp.swift */,
+				E43BFD192B4F1F6700E45643 /* SwiftDataEx.swift */,
+				E43BFD252B4F205B00E45643 /* MyExpense.swift */,
 				E43BFD1B2B4F1F6800E45643 /* Assets.xcassets */,
 				E43BFD1D2B4F1F6800E45643 /* Preview Content */,
 			);
-			path = SwiftData;
+			path = SwiftDataEx;
 			sourceTree = "<group>";
 		};
 		E43BFD1D2B4F1F6800E45643 /* Preview Content */ = {
@@ -70,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E43BFD132B4F1F6700E45643 /* SwiftData */ = {
+		E43BFD132B4F1F6700E45643 /* SwiftDataEx */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E43BFD222B4F1F6800E45643 /* Build configuration list for PBXNativeTarget "SwiftData" */;
+			buildConfigurationList = E43BFD222B4F1F6800E45643 /* Build configuration list for PBXNativeTarget "SwiftDataEx" */;
 			buildPhases = (
 				E43BFD102B4F1F6700E45643 /* Sources */,
 				E43BFD112B4F1F6700E45643 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftData;
+			name = SwiftDataEx;
 			productName = SwiftData;
-			productReference = E43BFD142B4F1F6700E45643 /* SwiftData.app */;
+			productReference = E43BFD142B4F1F6700E45643 /* SwiftDataEx.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E43BFD0F2B4F1F6700E45643 /* Build configuration list for PBXProject "SwiftData" */;
+			buildConfigurationList = E43BFD0F2B4F1F6700E45643 /* Build configuration list for PBXProject "SwiftDataEx" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E43BFD132B4F1F6700E45643 /* SwiftData */,
+				E43BFD132B4F1F6700E45643 /* SwiftDataEx */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43BFD1A2B4F1F6700E45643 /* SwiftData.swift in Sources */,
-				E43BFD182B4F1F6700E45643 /* SwiftDataApp.swift in Sources */,
+				E43BFD262B4F205B00E45643 /* MyExpense.swift in Sources */,
+				E43BFD1A2B4F1F6700E45643 /* SwiftDataEx.swift in Sources */,
+				E43BFD182B4F1F6700E45643 /* SwiftDataExApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +275,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftData/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataEx/Preview Content\"";
 				DEVELOPMENT_TEAM = 748RM22H5Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -300,7 +304,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftData/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataEx/Preview Content\"";
 				DEVELOPMENT_TEAM = 748RM22H5Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -325,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E43BFD0F2B4F1F6700E45643 /* Build configuration list for PBXProject "SwiftData" */ = {
+		E43BFD0F2B4F1F6700E45643 /* Build configuration list for PBXProject "SwiftDataEx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E43BFD202B4F1F6800E45643 /* Debug */,
@@ -334,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E43BFD222B4F1F6800E45643 /* Build configuration list for PBXNativeTarget "SwiftData" */ = {
+		E43BFD222B4F1F6800E45643 /* Build configuration list for PBXNativeTarget "SwiftDataEx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E43BFD232B4F1F6800E45643 /* Debug */,
