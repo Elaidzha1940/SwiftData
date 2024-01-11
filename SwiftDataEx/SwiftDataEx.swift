@@ -12,7 +12,8 @@ import SwiftData
 
 struct SwiftDataEx: View {
     @State private var isShowingItemSheet: Bool = false
-    var expenses: [MyExpense] = []
+    @Query(sort: \MyExpense.date) var expenses: [MyExpense]
+    @Environment(\.modelContext) var context
     
     var body: some View {
         
@@ -20,6 +21,13 @@ struct SwiftDataEx: View {
             List {
                 ForEach(expenses) { expense in
                     ExpensesCell(expense: expense)
+                }
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        context.delete(expenses[index])
+                        // I don't need it anymore
+                        //try! context.save()
+                    }
                 }
             }
             .navigationTitle("MyExpenses")
@@ -99,6 +107,32 @@ struct AddExpenseSheet: View {
                         context.insert(expense)
                         // SwiftData has a autosave.
                         //try! context.save()
+                        dismiss()
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct UpdateExpensesSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    @Bindable var expense: MyExpense
+    
+    var body: some View {
+        
+        NavigationStack {
+            Form {
+                TextField("Expense name", text: $expense.name)
+                DatePicker("Date", selection: $expense.date, displayedComponents: .date)
+                TextField("Value", value: $expense.value, format: .currency(code: "BTC"))
+                    .keyboardType(.decimalPad)
+            }
+            .navigationTitle("Update Expenses")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    Button("Done") {
                         dismiss()
                     }
                 }
