@@ -1,4 +1,4 @@
-SwiftData - Model, Container, Fetch, Create, Update & Delete.
+SwiftData - Model, @Query, Container, Fetch, Create, Update & Delete.
 =============================================================
 
 
