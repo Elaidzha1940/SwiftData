@@ -12,8 +12,11 @@ import SwiftData
 
 struct SwiftDataEx: View {
     @State private var isShowingItemSheet: Bool = false
-    @Query(sort: \MyExpense.date) var expenses: [MyExpense]
+   /* @Query(sort: \MyExpense.date)*/
+    @Query(filter: #Predicate<MyExpense> { $0.value > 100 }, sort: \MyExpense.date)
+    var expenses: [MyExpense]
     @Environment(\.modelContext) var context
+    @State private var expenseToEdit: MyExpense?
     
     var body: some View {
         
@@ -21,6 +24,9 @@ struct SwiftDataEx: View {
             List {
                 ForEach(expenses) { expense in
                     ExpensesCell(expense: expense)
+                        .onTapGesture {
+                            expenseToEdit = expense
+                        }
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
@@ -35,6 +41,9 @@ struct SwiftDataEx: View {
             .sheet(isPresented: $isShowingItemSheet, content: {
                 AddExpenseSheet()
             })
+            .sheet(item: $expenseToEdit) { expense in
+                UpdateExpensesSheet(expense: expense)
+            }
             .toolbar {
                 if !expenses.isEmpty {
                     Button("Add Expense", systemImage: "plus") {
@@ -90,7 +99,7 @@ struct AddExpenseSheet: View {
             Form {
                 TextField("Expense name", text: $name)
                 DatePicker("Date", selection: $date, displayedComponents: .date)
-                TextField("Value", value: $value, format: .currency(code: "BTC"))
+                TextField("Value", value: $value, format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("New Expenses")
@@ -125,7 +134,7 @@ struct UpdateExpensesSheet: View {
             Form {
                 TextField("Expense name", text: $expense.name)
                 DatePicker("Date", selection: $expense.date, displayedComponents: .date)
-                TextField("Value", value: $expense.value, format: .currency(code: "BTC"))
+                TextField("Value", value: $expense.value, format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Update Expenses")
