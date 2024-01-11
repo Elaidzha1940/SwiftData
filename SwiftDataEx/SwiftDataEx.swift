@@ -37,7 +37,7 @@ struct SwiftDataEx: View {
             .overlay {
                 if expenses.isEmpty {
                     ContentUnavailableView(label: {
-                        Label("No Expenses", systemImage: "list.bullet.rectangle.portraits")
+                        Label("No Expenses", systemImage: "list.bullet.rectangle.portrait")
                     }, description: {
                         Text("Start adding expense to see your list.")
                     }, actions: {
@@ -69,6 +69,7 @@ struct ExpensesCell: View {
 }
 
 struct AddExpenseSheet: View {
+    @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
     
     @State private var name: String = ""
@@ -77,13 +78,11 @@ struct AddExpenseSheet: View {
     
     var body: some View {
         
-        let formStyle = FormStyleConfiguration()
-
         NavigationStack {
             Form {
                 TextField("Expense name", text: $name)
                 DatePicker("Date", selection: $date, displayedComponents: .date)
-                TextField("Value", text: $value, format: .currency(code: "BTC"))
+                TextField("Value", value: $value, format: .currency(code: "BTC"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("New Expenses")
@@ -91,12 +90,16 @@ struct AddExpenseSheet: View {
             .toolbar {
                 ToolbarItemGroup(placement: .topBarLeading) {
                     Button("Cancel") {
-                        dismiss
+                        dismiss()
                     }
                 }
-                ToolbarItemGroup(placement: .topBarLeading) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Save") {
                         let expense = MyExpense(name: name, date: date, value: value)
+                        context.insert(expense)
+                        // SwiftData has a autosave.
+                        //try! context.save()
+                        dismiss()
                     }
                 }
             }
