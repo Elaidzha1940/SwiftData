@@ -1,4 +1,4 @@
-SwiftData - Model, @Query, @Bindable, Container, Fetch, Create, Update & Delete.
+SwiftData - Model, @Query, @Bindable, #Predicate, Container, Fetch, Create, Update & Delete.
 =============================================================
 
 @Query:
